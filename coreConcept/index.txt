@@ -1,0 +1,171 @@
+video 4 
+
+Moon-Modeler(it help to desine digram of filed relation and structure anbd schema)
+and based of digram it will give mongodb sorce code alod 
+OR you not have subscription of 
+# first concern about what field you have to store in db.
+how we take data point and in which way you have to store 
+first make clarity in mind in which ferment i have to store data
+
+# first we have to do data-modling(structure-data) by Moon-Modeler or on copy-pan
+# then think about how to data-type, retrieve ,validate ,which DB to use we think abut latter
+# we use mongoose or Prisma or data molding or object modeling 
+ 
+
+# we can create coding environment on 
+codesendbox , gitcodespace , stackblitz by using this we not what to install and package and liberoes
+
+# when ever you create file name in backend for module ,controllers ,routs etc. write like this user.Models , user. Controllers, user.Routs in this way you create file for each type.
+
+# what is mongoose work writing mongoDB validation, casting and business logic boilerplate is a drag . 
+# now you have to connect this server-data in my mongoose
+ex= 
+import mongoose from "mongoose";
+const userschema = new mongoose.Schema({    username:{type:String,require:tr,unique:true,lowerase:true},email:{type:String,reuire:tru,unique:true}    }
+) // this schema method will take one object {} then export this user-model and export use bymultiple files.
+export const User = mongoose.module("User",userSchema)//hear this "User" will create Db space by name of "users"(convert in lowercase & pus "s" at last)
+
+
+#schematypes Mongoose
+String
+Number
+Date
+Boolean
+Array
+Objectid
+Mixed
+Buffer
+
+#Schema operations:
+type
+required
+default
+unique
+index
+min
+max
+enum
+trim
+validate
+ref
+
+
+
+#time stamp :const userschema = new mongoose.Schema({ username:{type:String,require:tr,unique:true,lowerase:true} },{timestamps: true}// so that for each entry it will store time)
+#relation like in Sql have many ways like-wise in mongodf we have "CreatedBy{ type:mongopose.scjema.Type.objerctId,ref:"User"};
+
+
+when you are creating schema you have to think like this:-
+which schema is not decadent any schema
+which schema is depend on one schema  
+which schema is depend on two schema
+which schema is depend on three schema
+
+
+# In array sequence(order) meter but not in object
+ 
+
+# how to deal with image and videos 
+you can store image on mongoDB but it become heavy that is not good practice
+So we use cloud_Neary or AWS or we create one folder on server and access by public URL like.in same way interact with AWS and  cloud_Neary by URL.
+
+#how to use AWS and cloudnery:- what ever image or videos ,file first store on backend and after some time it will stor in cloudnery or AWS
+by some companyes store it diractly in cloudnery or AWS but it create issues when connection is lossed
+
+#by gitignored.io this website give all names of file which you not put on git so search Node on it and past in gitignored.txt so it restrict from github
+#In js we can do importing in two ways (common[require] js & module[import]) by-default importing by commonjs(require) but if you want to do by module(import)
+you have to write "type":"module.js" so it will take over all import by "import" only
+
+# we know what ever chnage we done in code we have to start server like run over react code So "nodemone" libery will help us to start-stop server based on chnages 
+and we have to change in package.json also in "scripts":{"dev":"nodemone src/index.js"}
+
+#diff in depandecy and dev-depandecy?
+ans: dev-depandecy :- its use in devlopment we not take it to production.
+     suppose nodemone you need in devlopment only not in production so generly you instal any libery "npm i nodemon" but make it dev-depandecy you have to write "npm install --save-dev nodemon" OR "npm i -D packegeName" to make it dev depandecy
+     depandecy :- this are use in production.
+
+# mkdir is use to create new folder.EX:- mkdir controllers DB middlewares models routes utils 
+
+# preettier :-  suppose two person mearched there code some have more space in code and maynot so preettier will deal with this type of small issues.
+                "npm i -D prittier"
+                but we have to create two file ".prettierrc" & ".preetterignore"
+                 ".prettierrc" is used for defining specification for space and all 
+                 ".preetterignore" is used for defining files in which prittier will not effect like .env(where we define all confidacial information) and many other files.
+
+# how to write moduler and reusable code in node js.
+#Network Access[ADD IP ACCESS List ENTRY] in production level mongodb you (add one meshine IP address) or (add corrent IP address) but not (allow access from anywhere) 
+
+#dotenv:- you define all information(port,dbURL,tokens etc ..) in .env so to get that all over the project you need one package which is "dotenv"
+# if you want to install all packeges in one short you use "npm i all packegeName"
+
+
+#always reomber this two things 
+(1) when ever you intract with DB always rap it with (try-catch) or (use porinse) by any one .
+(2) you DB is in anothe continent, so its take time to intract with DB so use (async-await) .
+    when ever you intracrt with DB use try-catch(use for error hedling) focue on async-await(use becouse BD is in another continent so it iwll take time to get data for that resone we use async-await).
+
+#iffi function this it will execute immedetly tihs is iffi function ";()()"
+how to make it async function
+;(async()=>{})()
+
+   
+
+# multiline comment /*  -----  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SAS pg adyar
+ 
+11000 with AC
+9000 without AC 2 shering  
+8500 without AC 3 shearing
+7500 without AC 4 shearing
+4500-500  Ad
+
+
+
+
+
+
+
+
+
+
+barry templeat react bearry 
+typescript 
+templeats 
+redux took
+context api
+react testing liberty
+jira
+
+git repo 
+full version ,sleak verson
+
+
+
+
+
+task 1:- 
+
