@@ -1,0 +1,25 @@
+typscript is inhande of js & it will not compiled in brouser so it will convert into js at last 
+we write typescript code ---------> it compiled and convert in js --------->then it run on brouser
+
+Q why again we are convering typescript into js then why would we not write js code only ?
+Ans: becouse  when we are using typescript we can cheak error at compiled time only but in js type error will come at runtime and we can not define all veriable type from before
+
+
+# with typescript we add objectOrianted programing also this help us to make classes,interface, clasess inside function that leads to manage over code .
+
+Q why to use tyopescript?
+ex:= 
+function add(num1,num2)
+{
+    retunr num1+num2;
+}
+console.log(add('2','3'))// '23' // whare we not sure will output 5 or 23 just becouse of typeisnotdegine.
+so by typescript we predefine type of number.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+
+how to install typescript 
+"npm insts"
+
+#spellcheck used for spalling cheak
+#"material icon theme" this will put icon for every file which give better understing about file & folder
+
