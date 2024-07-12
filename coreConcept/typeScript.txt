@@ -23,3 +23,97 @@ how to install typescript
 #spellcheck used for spalling cheak
 #"material icon theme" this will put icon for every file which give better understing about file & folder
 
+#Three main type in typescript:- 
+number:- which take 12,13.4
+string:- which take 'a',"a",`a`
+boolean:- which take true & false
+
+
+# what is type inference ?
+ex: let a = 10; // in typescript if you define like this it not take any other value in "a" except number.
+but we define like this 
+let data; // so what its type ? its type is any mena you can assine any type of value in it .
+
+# you can make "spacific number type variable" also mena you can  not assine any other value excapt this:-
+ex:-  let data:5=5; // its ok but if you assine other then 5 it give error 
+data = 10; // error 
+
+#const data = 10; // hear type itself become 10 becouse we can not change value of data.
+
+
+#Object-Type use of define type of value it will take 
+Ex:- const user:{name:string;age:number;email:string}={name:"anil",age:12,email:"pradhumnchoubey@gmail.com"}
+console.log(user.name);
+but you have another object which have smae values like this upper object so Value is dublicate in both object how to solve it ??
+by:-
+type objType={name:string;age:number;email:string}
+const person:objType={
+    name:"anil",
+    age:12,
+    email:"pradhumnchoubey@gmail.com"
+}
+const son:objType={
+    name:"rohon",
+    age:2,
+    email:"pradhumnchoubey@gmail.com"
+}
+if grup of object have some veraible we can define there type like this.
+
+
+#ArrayType:- you now js array will take all type of data but if you want to insert one type of data onely you can make it posible 
+Ex= let arr:[string]=["ram","shyam","sita","gita"]; // but it will not take any other type of value 
+but js array will take any type of data in that case you use "any" 
+Ex= let newArray:any[]=["abc",123,true]; // it will take all type of data.
+alos if over array only have two type of data let's say number & string you can dafine like this 
+Ex= let arr:string[] | number[]=["ram","shyam","sita","gita"]; // it will take only two type of data 
+
+
+#Tuple:- it is kind of array only but more advanced we can define each value type 
+Ex:- let role:[string,string,number,number,boolean?] = ['admin','manager',1,3] // hear we define boolean? becouse at present no value for boolean 
+and all this type is define in sequence and length is fixed 
+role.push(true)// now we are adding boolean value
+role[1]=10; // it give error 
+
+#enum :- it will assine number to each element in it
+Ex: enum Role{Admin,manager,reasonly,boss}
+console.log(Role.1) // Admin like this it will give value for each numbers second we can access all value by . all values will come
+
+
+#Any:- suppose you are geting data from api but you don't know the type of it then you cna use "any"
+you can use "any" with array also  "let data:any=[10,20];"
+but we not use "any" most offen
+
+#union:- if we are not which data will come between two or three type data or more you use "union"
+Ex:- function combine(a:number|string,b:number|string)
+     {if(typeof a === 'number' && typeof b ==='number'){retunr a+b;}else{return a.toString() + b.toString()}};
+     console.log(combine(10,20));
+     console.log(combine("shyam","choubey"));
+
+# if you now which type of value will come use "union" if you have no idea use "any"
+
+
+#Literal type:-it is simmeler to union but in union we define data but in Literal we assine values.
+ex:- function add(type:"rohon"|"sohon")
+{
+    if(type == "rohon")console.log("hello");
+    else if(type == "sohon")console.log("hii");
+}
+if we pass any other value except this two value it give error 
+
+
+#Type_alias:- it is union only but we create one veriable of it and use so we not want to more code 
+EX:- type varType = stirng | number | undefiend;
+let a : varType = 10;
+let b : varType = "hello";
+let c : varType = undefiend;
+
+#what is function type:- the type of value define by function as "retunr" is called functiontype
+EX:- function f1():number
+     {
+         return 20;
+     }
+so  
+
+
+
+
