@@ -15,7 +15,9 @@ function add(num1,num2)
 }
 console.log(add('2','3'))// '23' // whare we not sure will output 5 or 23 just becouse of typeisnotdegine.
 so by typescript we predefine type of number.
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+
+                                              
+
 
 how to install typescript 
 "npm insts"
@@ -113,7 +115,81 @@ EX:- function f1():number
          return 20;
      }
 
-Q can a function return    
+Q can a function return type is "undefiend"
+
+#void:- nothing or any function not returmning any thing is called void
+ex:- function f1(){console.log("hello");}/// this functiuon is not returning any thing is called void functiuon
+
+#unknnown type in TS :- when we don't know type of any veriable we define "unknown" but this same thing happning with "any" alos so what is diff in both
+Q diff in "unknown" & "any" ?
+ans:by using "any" you stop the power of typescript so you can you that veriable like js.
+Ex:- let data:any; data = 20;data="hello";let item:string; item=data;   // no error 
+but "unknown" give you flexiblity to assine another type but you can not assine this veriabe to another diff type of veriable
+Ex:- let data:unknown; data = 20;data="hello";let item:string; item=data;   // error you can not assine "item=data;" become you can not assine unknown to any other type of veriabe whihc is "stirng" in this case
+*how to solve this issue*(by putting condition)
+let data:undefiend;
+data = 20;
+data = "hello"
+let item:string;
+if(typeof data === 'string')
+{item = data;} 
+/// in this way we solve it become last type of data is "string" so we can assine any string type value in it by puttign condition.
+
+
+
+#never type:- it is use as returntype of over function give error become bydefalut if you not return any thing from function it will retunr undefiend but in case of error we return "never"
+
+
+# if you too many filed of typescript you have to compile all at same time how you can do that ??
+Ans:- first generat tsconfig.json file and in terminal "ts -w".
+
+# Include & Exclude file:- this is use for not executing or executing a group of file.
+*if you want to execute group of file:- you can create array ""include":[ write name of file]"
+*if you want to not execute group of file:- you can create array ""exclude":[ write name of file]"
+*if you folder suppose "test.ts" how many time come it will not execute how you  ""exclude":["*/rest.ts"]"
+Q how can you run a one file only which is present at multiple places ?
+
+
+
+#Target Configuration :- when ever we convert over  TS file into JS file it compile based on which "ecmascript" we define in "tsconfig.json" that ""target":"es5" so we can change hear so based in that it get compile 
+it give bennefeat we can use latest tools like ES6 and other things
+
+
+#rooDir & outDir :- both are used to manage folder formant.
+outDir:-we define folder name so for each file what ever file will generate it stor in on wile which you define in which is located in tsconfig.json 
+rooDir:-if you want to compile particuler folder inside Ts only you can define that path in "tsconfig.json" folder 
+
+ 
+#code Quality improvement options:-there is some values in "tsconfig.json" you can assine them for spacing and all othere thing.
+
+
+#what is class?:- class is  user-define datatype like let,const but class is define by user for a object ,like we are talking about "user" it is object  and class carry name,sername,age,some method for making operation in user object  ecmascript 
+fruits is class and apple is object.
+
+
+#Class compilation with ES5 and ES5 :- where you write typescript code it will compile by "tsc" and convert into js code so it we use ES5 it will generate diff code ES6 diff code becouse soo many new things comes in ES6.
+Q what is diff in ES5 and Es6 :- form ES6 you can use oops concepts like classe and object and all.
+
+#Access modifier:- they are present every oops supporting language they are use to define accessiblity of all veriable and method present in class.
+public access modifier:- we can use it method and veriable outside and inside anywhere.
+private access modifier:-only use method and veriable inside the class only
+protected access modifier:- we use inside this class and its child class inside also the method and veriable.
+
+#this is use inside class to access all its globle veriable and methods.
+
+
+# Constructer and shorthand initilization :-constructer will exceute when object is created for particuler class and we can use constructer to assine value in particuler object .
+
+#Read only Vs private:- 
+Q diff in readonly and private ?
+ 
+
+
+
+
+
+
+ 
 
 
 
