@@ -112,7 +112,8 @@ EX:- function f1():number
      {
          return 20;
      }
-so  
+
+Q can a function return    
 
 
 
