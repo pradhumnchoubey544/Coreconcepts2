@@ -184,12 +184,156 @@ protected access modifier:- we use inside this class and its child class inside 
 Q diff in readonly and private ?
  
 
+-------------------------------------------------------------------------------------
+
+#tupiles[]
+#multitype(| union)[]
+#any
+#function return type 
+#anonumes function we not want to define type becouse it will take 
+#you can deifne each perameter type of function
+Ex: function f1(color:{name:string,code:stirng,index:number}){}
+f1({name:"white",code:"#fff",index:"1"}); // we can not change siquence also
+
+ #optional porperty: ex: function f1(name:'string',age?:"number",index:"number"){}
+ hear age it is optional if we want we send or not.
+
+#nerowing in typescript: you parameter type is diff and you are applying diff method it give error to solve it use.
+by "type" cheaking we solve this error
+function get(position:number|string)
+{
+    if(typeof position === "string"){console.log(position.split(" "));}else conso;e.log(position);
+}   
+get(12);
+
+#type assertion: if type of veriable is "any" letter we will assine it by some type
+const name :any="brad";
+const uppercase = (name as string).toUppercase();
+or
+const uppercase1 = (<string> name).toUppercase();
+in this two ways we assine type of any value which is before "any"
 
 
+#null & undefiend in typescript
+const numb:number = 10;
+const allnum = [{n1:11},{n1:12},{n1:13}];
+const findNum = allnum.find((num)=>{num.n1===numb}) ;
+console.log(findnum.n1); // coding time error "nothing in findnum.n1" 
+//becouse typescript cheak there is nothing inside findnum after doing "find" operation becouse no case match for "10" os how good type script is.
 
 
+# Non-null assertion operation - !
 
+# type-aliases :-
+Ex:-
+type mytype=number;
+const phone = mytype =20;  // i make my type
+
+Ex:-
+type Emp={
+    id:number,
+    name:string,
+    email:string,
+    salery:number
+   }
+const adem: Emp = {
+      id:123,
+      name:"adem",
+      email:"a@gmail.com",
+      salery:1000
+}
+
+
+# Nested-type :- we define one type and use another type.
+type Emp = {
+    id:number,
+    number:string,
+    emil:string,
+    salary:number,
+    address:string
+}
+type Department ={
+    name:string,
+    employee:Emp[],
+    age:number
+}
+type company={
+  companyName:string,
+  companyDepartment:Department()
+}
  
+
+#OR-operater
+Ex:- we can create in this way also 
+type ISBN = number | string; // hear you are creating or-alyeses type
+cosnt bookISBN = ISBN = 12345;
+cosnt bookISBN2 = ISBN = "ram";
+
+#Intercaction-OPerater (its use for extended the privies type)(inharitance)
+type user={
+    name:string,
+    age:number
+}
+type Admin = user & {
+    role:"admin",
+    blood:string
+}
+type Customer= user & {
+    role:"customer",
+    phone:number
+
+}
+cosnt admin: Admin={
+    name:"rohon",
+    age:12,
+    role:"admin",
+    blood:"O+"
+}
+
+
+# Type-alirses using templeat Literal
+ex:
+const name :string="rohon";
+const wish:string = `good moring ${name}`;
+console.log(wish);
+
+type wish = "good moring ${city}";
+const newwish = wish = "good mumbai morning"; // compile time error
+const yyy = wish = "good morning mumbai"; // no-error
+
+
+
+#type-asyeses-function
+type calc = (a:number,b:number)=>number;
+const sum: calc=(p,q)=>p+q;  // by "calc" type we are deriving new function type.
+const mul: calc=(p,q)=>p*q;  // by "calc" type we are deriving new function type.
+console.log(sum(2,3));
+console.lag(mul(3,4));
+
+
+# interface: this are also for  
+
+
+
+
+
+# nerowing:- there are a multiple approch to achive narrowing :
+1. using the "typeof" type guard
+2.using the "equality" operater
+3.using the "in" operater
+4.using the "type predicates"
+5.using the "discriminated unions"
+
+
+
+
+
+
+
+and interface
+
+
+
 
 
 
